@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - MIGUELINIO</title>
+    <link rel="icon" type="image/png" href="tu-foto.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100">
+                    <polygon points="50,10 90,40 70,80 30,80 10,40" fill="url(#gradient1)"/>
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="productos.html" class="nav-link active">Productos</a></li>
+                <li><a href="comentarios.html" class="nav-link">Comentarios</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+        <div class="container">
+            <div class="hero-content animate-bounce-in">
+                <span class="section-tag">Tienda Exclusiva</span>
+                <h1 class="page-title">
+                    Mis <span class="gradient-text">Productos</span>
+                </h1>
+                <p class="page-description">
+                    Contenido premium, merchandise exclusivo y más. ¡Todo disponible vía Discord!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="producto">Producto</button>
+                <button class="filter-btn" data-filter="dibujo">Dibujo</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card" data-category="producto" data-scroll>
+                    <div class="product-badge hot">TOP</div>
+                    <div class="product-image">
+                        <img src="sancho.jpg" alt="Sancho">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Sancho Panza</h3>
+                        <p class="product-description">
+                            Hecho por mi
+                        </p>
+                        <div class="product-meta">
+                            <span class="product-price">$850 MX</span>
+                            <span class="product-tag producto-tag">Producto</span>
+                        </div>
+                        <a href="https://discord.com/invite/unykJpMvWE" target="_blank" class="buy-btn">
+                            <img src="discord.png" alt="Discord" class="btn-icon">
+                            Comprar por Discord
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card" data-category="producto" data-scroll>
+                    <div class="product-badge new">NUEVO</div>
+                    <div class="product-image">
+                        <img src="quijote.jpg" alt="Panza">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Quijote</h3>
+                        <p class="product-description">
+                            Hecho por mi
+                        </p>
+                        <div class="product-meta">
+                            <span class="product-price">$850 MX</span>
+                            <span class="product-tag producto-tag">Producto</span>
+                        </div>
+                        <a href="https://discord.com/invite/unykJpMvWE" target="_blank" class="buy-btn">
+                            <img src="discord.png" alt="Discord" class="btn-icon">
+                            Comprar por Discord
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card" data-category="dibujo" data-scroll>
+                    <div class="product-badge premium">PREMIUM</div>
+                    <div class="product-image">
+                        <img src="belleza.jpg" alt="Belleza Natural">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Belleza Natural</h3>
+                        <p class="product-description">
+                            Dibujo mixto en papel marquilla
+                        </p>
+                        <div class="product-meta">
+                            <span class="product-price">$Negociable</span>
+                            <span class="product-tag dibujo-tag">Dibujo</span>
+                        </div>
+                        <a href="https://discord.com/invite/unykJpMvWE" target="_blank" class="buy-btn">
+                            <img src="discord.png" alt="Discord" class="btn-icon">
+                            Comprar por Discord
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card" data-category="dibujo" data-scroll>
+                    <div class="product-image">
+                        <img src="cantarito.jpg" alt="El Cantarito">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">El Cantarito</h3>
+                        <p class="product-description">
+                            Tinta china en papel revolución
+                        </p>
+                        <div class="product-meta">
+                            <span class="product-price">$Negociable</span>
+                            <span class="product-tag dibujo-tag">Dibujo</span>
+                        </div>
+                        <a href="https://discord.com/invite/unykJpMvWE" target="_blank" class="buy-btn">
+                            <img src="discord.png" alt="Discord" class="btn-icon">
+                            Comprar por Discord
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card" data-category="dibujo" data-scroll>
+                    <div class="product-image">
+                        <img src="cantarito2.jpg" alt="Cantarito II">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cantarito II</h3>
+                        <p class="product-description">
+                            Dibujo a tinta china en papel fabriano
+                        </p>
+                        <div class="product-meta">
+                            <span class="product-price">$Negociable</span>
+                            <span class="product-tag dibujo-tag">Dibujo</span>
+                        </div>
+                        <a href="https://discord.com/invite/unykJpMvWE" target="_blank" class="buy-btn">
+                            <img src="discord.png" alt="Discord" class="btn-icon">
+                            Comprar por Discord
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card" data-category="dibujo" data-scroll>
+                    <div class="product-badge premium">PREMIUM</div>
+                    <div class="product-image">
+                        <img src="choquedebiomas.jpg" alt="Choque de Biomas">
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Choque de Biomas</h3>
+                        <p class="product-description">
+                            Óleo sobre telas
+                        </p>
+                        <div class="product-meta">
+                            <span class="product-price">$Negociable</span>
+                            <span class="product-tag dibujo-tag">Dibujo</span>
+                        </div>
+                        <a href="https://discord.com/invite/unykJpMvWE" target="_blank" class="buy-btn">
+                            <img src="discord.png" alt="Discord" class="btn-icon">
+                            Comprar por Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-scroll>
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Tienes dudas sobre algún producto?</h2>
+                <p>Únete a mi servidor de Discord y pregúntame lo que necesites</p>
+                <a href="https://discord.com/invite/unykJpMvWE" target="_blank" class="btn btn-primary btn-large">
+                    <img src="discord.png" alt="Discord" class="btn-icon">
+                    Ir al Discord
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <polygon points="50,10 90,40 70,80 30,80 10,40" fill="url(#gradient2)"/>
+                        <defs>
+                            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <p>Creando contenido épico</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="comentarios.html">Comentarios</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MIGUELINIO. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

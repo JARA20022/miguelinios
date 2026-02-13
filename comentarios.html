@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios - Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100">
+                    <polygon points="50,10 90,40 70,80 30,80 10,40" fill="url(#gradient1)"/>
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="comentarios.html" class="nav-link active">Comentarios</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Comments Hero -->
+    <section class="comments-hero">
+        <div class="container">
+            <div class="hero-content animate-bounce-in">
+                <span class="section-tag">Comunidad</span>
+                <h1 class="page-title">
+                    <span class="gradient-text">Comentarios</span>
+                </h1>
+                <p class="page-description">
+                    ¡Deja tu mensaje y forma parte de esta increíble comunidad!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nickname Modal -->
+    <div class="modal" id="nicknameModal">
+        <div class="modal-content animate-bounce-in">
+            <div class="modal-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            <h2>¡Bienvenido!</h2>
+            <p>Ingresa tu nickname para poder dejar comentarios</p>
+            <form id="nicknameForm">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="nicknameInput" 
+                        placeholder="Tu nickname" 
+                        maxlength="20"
+                        required
+                    >
+                    <span class="input-border"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Continuar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    <section class="comments-section" id="commentsSection">
+        <div class="container">
+            <!-- Comment Form -->
+            <div class="comment-form-container" data-scroll>
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <span id="userInitial">?</span>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name" id="displayNickname">Usuario</span>
+                        <button class="change-nickname-btn" id="changeNicknameBtn">Cambiar nickname</button>
+                    </div>
+                </div>
+                
+                <form id="commentForm" class="comment-form">
+                    <div class="form-group">
+                        <textarea 
+                            id="commentText" 
+                            placeholder="Escribe tu comentario aquí..."
+                            maxlength="500"
+                            rows="4"
+                            required
+                        ></textarea>
+                        <span class="char-count">
+                            <span id="charCount">0</span>/500
+                        </span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                            Publicar Comentario
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list" id="commentsList">
+                <h3 class="comments-title">
+                    <span class="gradient-text">Comentarios de la comunidad</span>
+                    <span class="comments-count" id="commentsCount">(0)</span>
+                </h3>
+
+                <!-- Example Comments (these will be replaced by dynamic ones) -->
+                <div class="comment-item" data-scroll>
+                    <div class="comment-avatar">
+                        <span>G</span>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">GamerPro123</span>
+                            <span class="comment-date">Hace 2 horas</span>
+                        </div>
+                        <p class="comment-text">
+                            ¡Increíble contenido! Sigue así, me encanta tu energía y dedicación. 
+                            La comunidad es lo mejor 🔥
+                        </p>
+                        <div class="comment-actions">
+                            <button class="comment-action">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                                </svg>
+                                <span>12</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment-item" data-scroll>
+                    <div class="comment-avatar">
+                        <span>L</span>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">LunaGaming</span>
+                            <span class="comment-date">Hace 5 horas</span>
+                        </div>
+                        <p class="comment-text">
+                            Llevo siguiéndote desde el principio y no puedo creer lo mucho que has crecido. 
+                            ¡Felicidades por todo! 🎉
+                        </p>
+                        <div class="comment-actions">
+                            <button class="comment-action">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                                </svg>
+                                <span>8</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comment-item" data-scroll>
+                    <div class="comment-avatar">
+                        <span>X</span>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <span class="comment-author">xXShadowXx</span>
+                            <span class="comment-date">Hace 1 día</span>
+                        </div>
+                        <p class="comment-text">
+                            Los mejores streams de la plataforma, sin duda. Siempre entretenido y con buena onda 💪
+                        </p>
+                        <div class="comment-actions">
+                            <button class="comment-action">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                                </svg>
+                                <span>15</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New comments will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <polygon points="50,10 90,40 70,80 30,80 10,40" fill="url(#gradient2)"/>
+                        <defs>
+                            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <p>Creando contenido épico</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="comentarios.html">Comentarios</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mi Portafolio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="comments.js"></script>
+</body>
+</html>

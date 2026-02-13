@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Cambiar el título de la pestaña -->
+    <title>MIGUELINIO</title>
+
+    <!-- Favicon: reemplaza 'tu-foto.jpg' con la ruta de tu imagen -->
+    <link rel="icon" type="image/png" href="tu-foto.jpg">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100">
+                    <polygon points="50,10 90,40 70,80 30,80 10,40" fill="url(#gradient1)"/>
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                <li><a href="productos.html" class="nav-link">Productos</a></li>
+                <li><a href="comentarios.html" class="nav-link">Comentarios</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-text animate-bounce-in">
+                <h1 class="glitch" data-text="Hola, soy">Hola, soy</h1>
+                <h2 class="name-title">
+                    <span class="gradient-text">MIGUELINIO</span>
+                </h2>
+                <p class="hero-description">
+                    Creador de contenido • Streamer • Emprendedor Digital
+                </p>
+                <div class="cta-buttons">
+                    <a href="#productos" class="btn btn-primary pulse">
+                        Ver Productos
+                    </a>
+                    <a href="#contacto" class="btn btn-secondary">
+                        Contáctame
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image animate-float">
+                <div class="image-container">
+                    <!-- Reemplaza con tu imagen -->
+                    <img src="tu-foto.jpg" alt="Mi foto" class="profile-image" id="profileImage">
+                    <div class="image-glow"></div>
+                    <div class="particles-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-scroll>
+                    <div class="stat-number" data-target="222100">0</div>
+                    <div class="stat-label">Seguidores</div>
+                </div>
+                <div class="stat-card" data-scroll>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Streams</div>
+                </div>
+                <div class="stat-card" data-scroll>
+                    <div class="stat-number" data-target="1500">0</div>
+                    <div class="stat-label">Horas En Vivo</div>
+                </div>
+                <div class="stat-card" data-scroll>
+                    <div class="stat-number" data-target="0">0</div>
+                    <div class="stat-label">Productos Vendidos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section" data-scroll>
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">Momentos Épicos</span>
+            </h2>
+            <p class="section-subtitle">Con mis increíbles seguidores / entrevistas</p>
+            
+            <div class="carousel-container">
+                <button class="carousel-btn prev" id="prevBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-track">
+                    <div class="carousel-slide active">
+                        <img src="carousel-1.jpg" alt="Momento 1">
+                        <div class="slide-overlay">
+                            <h3>Stream Épico #1</h3>
+                            <p>¡Increíble momento con la comunidad!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="carousel-2.jpg" alt="Momento 2">
+                        <div class="slide-overlay">
+                            <h3>Stream Épico #2</h3>
+                            <p>¡Batiendo récords juntos!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="carousel-3.jpg" alt="Momento 3">
+                        <div class="slide-overlay">
+                            <h3>Stream Épico #3</h3>
+                            <p>¡La mejor comunidad del mundo!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="carousel-4.jpg" alt="Momento 4">
+                        <div class="slide-overlay">
+                            <h3>Stream Épico #4</h3>
+                            <p>¡Momentos inolvidables!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" id="nextBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <div class="carousel-indicators" id="indicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="sobre-mi" data-scroll>
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        <img src="about-image.jpg" alt="Sobre mí">
+                        <div class="about-decoration"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Conóceme</span>
+                    <h2 class="section-title">
+                        Algo <span class="gradient-text">Sobre Mí</span>
+                    </h2>
+                    <div class="about-text">
+                        <p>
+                            ¡Hola! Soy un apasionado creador de contenido que ama conectar con su comunidad. 
+                            Desde hace 2 años he estado compartiendo mi pasión por [gaming/arte/música/etc] 
+                            con personas increíbles de todo el mundo.
+                        </p>
+                        <p>
+                            Mi objetivo es crear un espacio donde todos se sientan bienvenidos y puedan 
+                            disfrutar de contenido de calidad. Ya sea streaming, videos, o interactuando 
+                            en redes sociales, siempre busco dar lo mejor de mí.
+                        </p>
+                        <p>
+                            Cuando no estoy creando contenido, me encanta dibujar, stremear y 
+                            pasar tiempo con mi increíble comunidad que ha hecho todo esto posible.
+                        </p>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-tag">Streaming</div>
+                        <div class="skill-tag">Edición</div>
+                        <div class="skill-tag">Gaming</div>
+                        <div class="skill-tag">Diseño</div>
+                        <div class="skill-tag">Entretenimiento</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto" data-scroll>
+        <div class="container">
+            <h2 class="section-title text-center">
+                Sígueme en <span class="gradient-text">Redes Sociales</span>
+            </h2>
+            <p class="section-subtitle text-center">¡Conectemos en todas las plataformas!</p>
+            
+            <div class="social-grid">
+                <a href="#" class="social-card youtube" target="_blank">
+                    <div class="social-icon">
+                        <img src="yt.png" alt="YouTube">
+                    </div>
+                    <div class="social-info">
+                        <h3>YouTube</h3>
+                        <p>Suscríbete a mi canal</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <a href="#" class="social-card twitch" target="_blank">
+                    <div class="social-icon">
+                        <img src="twitch.png" alt="Twitch">
+                    </div>
+                    <div class="social-info">
+                        <h3>Twitch</h3>
+                        <p>Mira mis streams</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <a href="#" class="social-card discord" target="_blank">
+                    <div class="social-icon">
+                        <img src="discord.png" alt="Discord">
+                    </div>
+                    <div class="social-info">
+                        <h3>Discord</h3>
+                        <p>Únete a la comunidad</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <a href="#" class="social-card tiktok" target="_blank">
+                    <div class="social-icon">
+                        <img src="tiktok.png" alt="TikTok">
+                    </div>
+                    <div class="social-info">
+                        <h3>TikTok</h3>
+                        <p>Sígueme para más</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <a href="#" class="social-card kick" target="_blank">
+                    <div class="social-icon">
+                        <img src="kick.png" alt="Kick">
+                    </div>
+                    <div class="social-info">
+                        <h3>Kick</h3>
+                        <p>Sígueme en Kick</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <a href="#" class="social-card instagram" target="_blank">
+                    <div class="social-icon">
+                        <img src="ig.png" alt="Instagram">
+                    </div>
+                    <div class="social-info">
+                        <h3>Instagram</h3>
+                        <p>Fotos y stories</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <a href="#" class="social-card facebook" target="_blank">
+                    <div class="social-icon">
+                        <img src="fb.png" alt="Facebook">
+                    </div>
+                    <div class="social-info">
+                        <h3>Facebook</h3>
+                        <p>Sígueme en Facebook</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+
+                <a href="#" class="social-card paypal" target="_blank">
+                    <div class="social-icon">
+                        <img src="paypal.png" alt="PayPal">
+                    </div>
+                    <div class="social-info">
+                        <h3>PayPal</h3>
+                        <p>Apóyame aquí</p>
+                    </div>
+                    <div class="social-arrow">→</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <polygon points="50,10 90,40 70,80 30,80 10,40" fill="url(#gradient2)"/>
+                        <defs>
+                            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <p>Creando contenido épico</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="comentarios.html">Comentarios</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mi Portafolio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
