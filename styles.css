@@ -3,9 +3,9 @@
    ==================================== */
 :root {
     /* Colors */
-    --primary: #00f0ff;
-    --secondary: #ff00ff;
-    --accent: #7000ff;
+    --primary: #0055ff;
+    --secondary: #00ff66;
+    --accent: #006600;
     --dark: #0a0a0f;
     --darker: #050508;
     --light: #ffffff;
@@ -36,10 +36,10 @@
     --transition-slow: 0.5s ease;
     
     /* Shadows */
-    --shadow-sm: 0 2px 10px rgba(0, 240, 255, 0.1);
-    --shadow-md: 0 4px 20px rgba(0, 240, 255, 0.2);
-    --shadow-lg: 0 8px 40px rgba(0, 240, 255, 0.3);
-    --shadow-neon: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(255, 0, 255, 0.3);
+    --shadow-sm: 0 2px 10px rgba(0, 85, 255, 0.1);
+    --shadow-md: 0 4px 20px rgba(0, 85, 255, 0.2);
+    --shadow-lg: 0 8px 40px rgba(0, 85, 255, 0.3);
+    --shadow-neon: 0 0 20px rgba(0, 85, 255, 0.5), 0 0 40px rgba(0, 255, 102, 0.3);
 }
 
 * {
@@ -106,7 +106,7 @@ body {
     z-index: 1000;
     background: rgba(10, 10, 15, 0.8);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 85, 255, 0.1);
     transition: var(--transition-normal);
 }
 
@@ -207,7 +207,7 @@ body {
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(0, 85, 255, 0.1) 0%, transparent 70%);
     animation: pulse 4s ease-in-out infinite;
 }
 
@@ -296,7 +296,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(0, 240, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 85, 255, 0.6), 0 0 60px rgba(0, 255, 102, 0.4);
 }
 
 .btn-secondary {
@@ -327,7 +327,7 @@ body {
     border-radius: 20px;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.5));
+    filter: drop-shadow(0 0 30px rgba(0, 85, 255, 0.5));
 }
 
 .image-glow {
@@ -399,7 +399,7 @@ body {
     text-align: center;
     padding: 2rem;
     background: rgba(26, 26, 46, 0.5);
-    border: 1px solid rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 85, 255, 0.1);
     border-radius: 15px;
     transition: var(--transition-normal);
 }
@@ -421,10 +421,10 @@ body {
     margin-bottom: 0.5rem;
 
     /* NUEVO: asegurar que el texto no se corte */
-    white-space: nowrap;       /* evita que el número se divida en varias líneas */
-    overflow: visible;         /* asegura que se vea completo */
-    display: inline-block;     /* para que el ancho se ajuste al contenido */
-    text-align: center;        /* opcional, para centrar el número */
+    white-space: nowrap;
+    overflow: visible;
+    display: inline-block;
+    text-align: center;
 }
 
 
@@ -510,7 +510,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 240, 255, 0.2);
+    background: rgba(0, 85, 255, 0.2);
     border: 2px solid var(--primary);
     color: var(--light);
     width: 50px;
@@ -547,7 +547,7 @@ body {
 .indicator {
     width: 40px;
     height: 4px;
-    background: rgba(0, 240, 255, 0.3);
+    background: rgba(0, 85, 255, 0.3);
     border-radius: 2px;
     cursor: pointer;
     transition: var(--transition-fast);
@@ -606,7 +606,7 @@ body {
 .section-tag {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: rgba(0, 240, 255, 0.1);
+    background: rgba(0, 85, 255, 0.1);
     border: 1px solid var(--primary);
     border-radius: 20px;
     color: var(--primary);
@@ -659,7 +659,7 @@ body {
     gap: 1rem;
     padding: 1.5rem;
     background: rgba(26, 26, 46, 0.5);
-    border: 2px solid rgba(0, 240, 255, 0.1);
+    border: 2px solid rgba(0, 85, 255, 0.1);
     border-radius: 15px;
     text-decoration: none;
     color: var(--light);
@@ -770,7 +770,7 @@ body {
 .filter-btn {
     padding: 0.75rem 1.5rem;
     background: transparent;
-    border: 2px solid rgba(0, 240, 255, 0.3);
+    border: 2px solid rgba(0, 85, 255, 0.3);
     color: var(--light);
     font-family: var(--font-primary);
     text-transform: uppercase;
@@ -795,7 +795,7 @@ body {
 
 .product-card {
     background: rgba(26, 26, 46, 0.5);
-    border: 1px solid rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 85, 255, 0.1);
     border-radius: 15px;
     overflow: hidden;
     transition: var(--transition-normal);
@@ -921,21 +921,22 @@ body {
     font-size: 0.75rem;
     text-transform: uppercase;
 }
+
 .product-image img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center; /* centra la imagen en el contenedor */
+    object-position: center;
     transition: var(--transition-slow);
 }
 
 .digital-tag {
-    background: rgba(0, 240, 255, 0.2);
+    background: rgba(0, 85, 255, 0.2);
     color: var(--primary);
 }
 
 .merch-tag {
-    background: rgba(255, 0, 255, 0.2);
+    background: rgba(0, 255, 102, 0.2);
     color: var(--secondary);
 }
 
@@ -1067,7 +1068,7 @@ body {
     width: 100%;
     padding: 1rem;
     background: rgba(26, 26, 46, 0.5);
-    border: 2px solid rgba(0, 240, 255, 0.2);
+    border: 2px solid rgba(0, 85, 255, 0.2);
     border-radius: 10px;
     color: var(--light);
     font-family: var(--font-secondary);
@@ -1105,7 +1106,7 @@ body {
     max-width: 800px;
     margin: 0 auto 4rem;
     background: rgba(26, 26, 46, 0.5);
-    border: 1px solid rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 85, 255, 0.1);
     border-radius: 15px;
     padding: 2rem;
 }
@@ -1116,7 +1117,7 @@ body {
     gap: 1rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 85, 255, 0.1);
 }
 
 .user-avatar {
@@ -1181,7 +1182,7 @@ body {
     gap: 1rem;
     padding: 1.5rem;
     background: rgba(26, 26, 46, 0.3);
-    border: 1px solid rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 85, 255, 0.1);
     border-radius: 15px;
     margin-bottom: 1rem;
     transition: var(--transition-normal);
@@ -1258,7 +1259,7 @@ body {
    ==================================== */
 .footer {
     background: var(--darker);
-    border-top: 1px solid rgba(0, 240, 255, 0.1);
+    border-top: 1px solid rgba(0, 85, 255, 0.1);
     padding: 3rem 0 1rem;
     position: relative;
     z-index: 1;
@@ -1269,7 +1270,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 85, 255, 0.1);
 }
 
 .footer-logo {
